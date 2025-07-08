@@ -1,13 +1,15 @@
-import "./App.css";
-import { Button } from "./components/ui/button";
+import { Toaster } from "@/components/ui/sonner";
+import Navbar from "./components/Navbar";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center">
-      <h1 className="text-red-600 bg-red">Tutorial Shadcn Ui</h1>
-      <Button variant={"destructive"} className="p-10">
-        Ini Button dari shadcn ui
-      </Button>
+    <div className="min-h-screen bg-background text-foreground">
+      <Navbar />
+      <main className="container py-6">
+        <AppRoutes />
+      </main>
+      <Toaster />
     </div>
   );
 }
